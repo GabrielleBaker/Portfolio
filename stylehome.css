@@ -1,0 +1,166 @@
+body {
+    font-family: Georgia, serif;
+    background-color: rgb(255, 255, 255);
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    
+    'nav nav nav nav nav nav'
+    'header header header header header header'
+    'main main main main aside aside'
+    'footer footer footer footer footer footer';
+    grid-gap: 0.5em;
+    padding: 0.5em;
+    max-width: 75%;
+    margin: auto;
+}
+
+header {
+    grid-area: header;
+    background-color: rgb(181, 9, 9);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 1em;
+    border-radius: 10px;
+}
+
+nav {
+    grid-area: nav;
+    background-color: rgb(181, 9, 9);
+    color: rgb(0, 0, 0);
+    max-height: fit-content;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+nav ul {
+    text-align: center;
+    padding: 0;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline;
+    font-weight: bold;
+    padding: 1em;
+}
+
+.icons {
+    max-width: 5%;
+    margin: auto;
+    padding-left: 1em;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.headertext {
+    padding-left: 0.5em;
+    font-size: 1.5em;
+    
+    color: rgb(0, 0, 0);
+    padding: 0.5em;
+    border-radius: 10px;
+}
+
+main {
+    grid-area: main;
+    padding: 1em;
+    background-color: rgb(224, 224, 224);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+aside {
+    grid-area: aside;
+    text-align: center;
+    background-color: rgb(224, 224, 224);
+    color: rgb(0, 0, 0);
+    margin: auto;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(181, 9, 9);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+    margin: 1em 0;
+    clear: both;
+}
+
+.cleared-image {
+    display: block;
+    margin: 1em auto;
+    clear: both;
+}
+
+/* First breakpoint - Tablet */
+@media only screen and (max-width: 900px) {
+    .grid-container {
+        grid-template-areas:
+            'nav nav nav nav nav nav'
+            'header header header header header header'
+            'aside aside aside aside aside aside'
+            'main main main main main main'
+            
+            'footer footer footer footer footer footer';
+    }
+
+    img {
+        max-width: 80%;
+        margin: 1em auto;
+    }
+}
+
+/* Second breakpoint - Mobile */
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-areas:
+            'nav nav nav nav nav nav'
+            'header header header header header header'
+            'aside aside aside aside aside aside'
+            'main main main main main main'
+            
+            'footer footer footer footer footer footer';
+    }
+
+    img {
+        max-width: 50%;
+        margin: 1em auto;
+    }
+
+    .icons {
+        max-width: 15%;
+        display: inline;
+        margin-left: 5%;
+        float: left;
+    }
+
+    nav li {
+        display: block;
+        margin: auto;
+        padding: 0.2em;
+        text-align: center;
+    }
+
+    .flag {
+        max-width: 50%;
+        margin-left: 2em;
+    }
+
+    
+}
